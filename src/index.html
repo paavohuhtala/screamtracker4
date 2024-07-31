@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=VT323&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.scss" />
+  <title>Scream Tracker 4.0</title>
+</head>
+
+<body>
+  <header>
+    <h1>Scream Tracker 4.0</h1>
+  </header>
+  <section class="details">
+    <div class="labels">
+      <span>User</span>
+      <span>Since</span>
+      <span>Friend of Hjumor</span>
+    </div>
+    <div class="values">
+      <span>hjuumorwake</span>
+      <span id="start-date">2021-09-01</span>
+      <span>Since very young age</span>
+    </div>
+  </section>
+  <section class="keys">
+    <span>SPACE ...</span>
+    <span>Enter Scream</span>
+  </section>
+  <section class="screams">
+    <div class="screams-header">
+      <div class="dots"></div>
+      <span>Scream Logger (F2)</span>
+      <div class="dots"></div>
+    </div>
+    <table class="screams-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th><span>
+              Time
+            </span>
+          </th>
+          <th><span>
+              Duration
+            </span>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="scream-rows">
+        <tr class="scream-row scream-placeholder">
+          <td>00</th>
+          <td>On space you can hear scream.... </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <div class="screams" hidden>
+    <audio id="scream-start" src="./wilhelm_start.ogg" preload="auto"></audio>
+    <audio id="scream-loop" src="./wilhelm_loop.ogg" preload="auto" loop></audio>
+    <audio id="scream-end" src="./wilhelm_end.ogg" preload="auto"></audio>
+  </div>
+  <div class="error-screen">
+    <h2>An error has occured. To continue:</h2>
+    <p>Try refreshing the page on better hardware</p>
+  </div>
+
+  <script src="./index.ts" type="module"></script>
+</body>
+
+</html>
